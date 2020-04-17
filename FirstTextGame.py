@@ -1,0 +1,80 @@
+# name: Noel Savoy
+# date: 4/13/2020
+# description: Text-based fantasy game
+import random
+import time
+
+def displayintro():
+    print("They came at night, wrapped in shadow.")
+    time.sleep(1.75)
+    print("You awoke to a scream.")
+    time.sleep(1.75)
+    print("You scamper from your tent.")
+    time.sleep(1.75)
+    print("Flames illuminate a once peaceful sky.")
+    time.sleep(1.75)
+    print("A masked man stands in the distance.")
+    time.sleep(1.75)
+    print("There are sounds of struggle. ")
+    time.sleep(1.75)
+    print("You see the masked man both taunt and pull at someone.")
+    time.sleep(1.75)
+    print("The masked figure sees you.")
+    time.sleep(1.75)
+    print("'Don't move. '")
+    time.sleep(1.75)
+    print("An ominous pause occurs.")
+    time.sleep(2.5)
+    print("'You move, he dies,' the figure taunts.")
+    time.sleep(1.75)
+    print("He gestures to your sword.")
+    time.sleep(1.75)
+    print("'Drop it.'")
+    time.sleep(1.75)
+    print("He is holding your companion by his hair, a knife pulled across his throat.")
+    time.sleep(1.75)
+    print("He restates:")
+    time.sleep(1.5)
+    print("'I will kill him.'")
+    time.sleep(2)
+    print()
+
+def choosePath():
+    path = ""
+    while path != "1" and path != "2": #input validation
+        path = input("What will you do? (1 or 2): ")
+    return path
+def checkPath(chosenPath):
+    print("You are the product of your choices.")
+    time.sleep(2)
+    print("You drop your weapon. It clatters to the ground.")
+    time.sleep(2)
+    print("'Good, I thought you would be stubborn.'")
+
+    correctpath = (1)
+    incorrectpath = (2)
+    if chosenPath == str(correctpath):
+        print("You see an opening and kick some sand into the assailant's eyes.")
+        time.sleep(1.75)
+        print("You save your buddy!")
+    if chosenPath == str(incorrectpath):
+        print("You decide your are a fighter.")
+        time.sleep(1.75)
+        print("You reach for your weapon.")
+        time.sleep(1.75)
+        print("The masked man does not flinch.")
+        time.sleep(1.75)
+        print("He slices your friend's throat.")
+        time.sleep(1.75)
+        print("You watch the blood and life ebb from your friend's face.")
+
+
+playagain = "yes"
+while playagain == "yes" or playagain == "y":
+    displayintro()
+    choice = choosePath()
+    checkPath(choice) #choice is equal to "1" or "2"
+    playagain = input("You failed! Try again? (Yes or y to continue playing):")
+displayintro()
+choosePath()
+
